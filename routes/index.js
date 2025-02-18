@@ -1,6 +1,7 @@
 import express, { query } from "express"
 import pool from "../db.js"
 
+
 const router = express.Router()
 
 router.get("/", async (req, res) => {
@@ -23,5 +24,8 @@ router.get("/:id/delete", async (req, res) => {
 
   res.redirect("/")
 })
+
+
+
 
 export default router

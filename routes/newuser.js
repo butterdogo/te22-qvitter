@@ -16,9 +16,8 @@ router.post('/user', async (req, res) => {
     const [result] = await pool.promise().query('INSERT INTO user (name) VALUES (?)', [name])
     const [tweets] = await pool.promise().query(`SELECT tweet.*, user.name FROM tweet JOIN user ON tweet.author_id = user.id;`)
 
-    res.render('index.njk', {
-
-    })
+    res.redirect("/")
+   
 })
 
 
