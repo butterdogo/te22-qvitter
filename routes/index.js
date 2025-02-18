@@ -25,11 +25,3 @@ router.get("/:id/delete", async (req, res) => {
 })
 
 export default router
-
-router.get("/:id/repost", async (req, res) => {
-  const id = req.params.id
-
-  await pool.promise().query('INSERT INTO tweet (author_id, message) VALUES (?, ?)', [author_id, message])
-
- res.redirect("/")
-})
